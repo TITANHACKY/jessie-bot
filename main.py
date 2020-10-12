@@ -9,7 +9,7 @@ while True:
     updates = updates["result"]
     if updates:
         for msgs in updates:
-            usr_id = msgs["message"]["chat"]["id"]
+            
             try:
                 usr_username = msgs["message"]["from"]["username"]
                 usr_link = f"https://t.me/{usr_username}"
@@ -24,6 +24,10 @@ while True:
                 usr_lname = msgs["message"]["from"]["last_name"]
             except:
                 usr_lname = ""
+            try:
+                usr_id = msgs["message"]["chat"]["id"]
+            except:
+                usr_id = msgs["edited_message"]["chat"]["id"]
             update_id = msgs["update_id"]
             try:                                                                              
                 message = msgs["message"]["text"]
@@ -135,8 +139,10 @@ while True:
                     except:
                         message = ""
 
-                
-            to = msgs["message"]["chat"]["id"]
+            try:    
+                to = msgs["message"]["chat"]["id"]
+            except:
+                to = msgs["edited_message"]["chat"]["id"]
             reply = message
             f=open("user_id.txt","a")
             f.write(str(usr_id)+"\n")
