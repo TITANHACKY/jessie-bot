@@ -1,6 +1,4 @@
 from bot import telegram_bot
-import gizoogle
-
 
 update_id = None
 while True:
@@ -34,7 +32,7 @@ while True:
                 if(message=="/start" or message=="/start@MissJessie_Bot"):
                     message = f"👋ʜᴇʏ @{usr_username}\n\n✦ɪ'ᴀᴍ ᴍɪss ᴊᴇssɪᴇ. ɪ ᴡᴀs ᴀ ᴘʏᴛʜᴏɴ ʙᴏᴛ ᴜsᴇᴅ ᴛᴏ ғɪɴᴅ  ᴜsᴇʀ ɪᴅ ᴜsᴇʀɴᴀᴍᴇ ғɪʀsᴛɴᴀᴍᴇ ʟᴀsᴛɴᴀᴍᴇ ᴀɴᴅ  ᴘʀᴏғɪʟᴇ ʟɪɴᴋ\n\n✦ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴀɴᴅ ᴘʀᴏᴍᴏᴛᴇ ᴍᴇ ᴛᴏ ᴀᴅᴍɪɴ ᴀᴏ ᴛʜᴀᴛ ɪ ᴄᴀɴ ғɪɴᴅ ᴛʜᴇ ᴜsᴇʀ ᴅᴇᴛᴀɪʟs ʙʏ ᴊᴜsᴛ ʀᴇᴘʟʏɪɴɢ ᴛᴏ ᴛʜᴇ ᴜsᴇʀ ᴍᴇssᴀɢᴇ\n\n✦ɪʟʟ ᴡᴇʟᴄᴏᴍᴇ ɴᴇᴡ ᴜsᴇʀs ɪɴ ɢʀᴏᴜᴘ\n\n✦ʜɪᴛ /help ᴛᴏ ʟᴏᴀᴅ ᴍʏ ᴄᴏᴍᴍᴀɴᴅs."
                 elif(message=="/help" or message=="/help@MissJessie_Bot"):
-                    message = "ʜɪ I'ᴍ ᴀ sɪᴍᴘʟᴇ ᴘʏᴛʜᴏɴ ʙᴏᴛ ᴡɪᴛʜ ғᴇᴡ ᴄᴏᴍᴍᴀɴᴅs:\n\n/info - ●ᴛᴏ ɢᴇᴛ ᴅᴇᴛᴀɪʟs\n\n/id - ●ᴛᴏ ғɪɴᴅ ɪᴅ\n\n/uname - ●ᴛᴏ ғɪɴᴅ ᴜsᴇʀɴᴀᴍʀ\n\n/name - ●ᴛᴏ ғɪɴᴅ ɴᴀᴍᴇ\n\n/fname - ●ᴛᴏ ғɪɴᴅ ғғɪʀsᴛɴᴀᴍᴇ\n\n/lname - ●ᴛᴏ ғɪɴᴅ ʟᴀsᴛɴᴀᴍᴇ\n\n/link - ●ᴛᴏ ɢᴇᴛ ᴘʀᴏғɪʟᴇ ʟɪɴᴋ\n\n/creator - ●ᴛᴏ ғɪɴᴅ ᴍʏ ᴄʀᴇᴀᴛᴏʀ"
+                    message = "ʜɪ I'ᴍ ᴀ sɪᴍᴘʟᴇ ᴘʏᴛʜᴏɴ ʙᴏᴛ ᴡɪᴛʜ ғᴇᴡ ᴄᴏᴍᴍᴀɴᴅs:\n/info - ●ᴛᴏ ɢᴇᴛ ᴅᴇᴛᴀɪʟs\n/id - ●ᴛᴏ ғɪɴᴅ ɪᴅ\n/uname - ●ᴛᴏ ғɪɴᴅ ᴜsᴇʀɴᴀᴍʀ\n/name - ●ᴛᴏ ғɪɴᴅ ɴᴀᴍᴇ\n/fname - ●ᴛᴏ ғɪɴᴅ ғғɪʀsᴛɴᴀᴍᴇ\n/lname - ●ᴛᴏ ғɪɴᴅ ʟᴀsᴛɴᴀᴍᴇ\n/link - ●ᴛᴏ ɢᴇᴛ ᴘʀᴏғɪʟᴇ ʟɪɴᴋ\n/pin - ●ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ ᴛᴏ ᴘɪɴ\n/unpin - ●ᴛᴏ ᴜɴᴘɪɴ ᴛʜᴇ ᴍᴇssᴀɢᴇ\n/creator - ●ᴛᴏ ғɪɴᴅ ᴍʏ ᴄʀᴇᴀᴛᴏʀ"
                 elif(message=="/id" or message=="/id@MissJessie_Bot"):
                     try:
                         usr_id = msgs["message"]["reply_to_message"]["from"]["id"]
@@ -119,13 +117,19 @@ while True:
                         message = f"🔗ʟɪɴᴋ:\n\n{usr_link}"
                     except:
                         message = f"🔗ʟɪɴᴋ:\n\n{usr_link}"
-                elif(message=="/pin"):
+                elif(message=="/pin"or message=="/pin@MissJessie_Bot"):
                     try:
                         msg_id = msgs["message"]["reply_to_message"]["message_id"]
                         message = ""
                         telegram_bot().pin_message(usr_id,msg_id)
                     except:
-                        message = ("Reply to any Message To pin it")
+                        message = ("ᴏᴏᴘs! ʀᴇᴘʟʏ ᴛᴏ ᴀɴ ᴍᴇssᴀɢᴇ ᴛᴏ ᴘɪɴ")
+                elif(message=="/unpin"or message=="/unpin@MissJessie_Bot"):
+                    try:
+                        message = ""
+                        telegram_bot().unpin_message(usr_id)
+                    except:
+                        message = ("ᴏᴏᴘs! ᴛʜᴇʀᴇ ɪs ɴᴏ ᴘɪɴɴᴇᴅ ᴍᴇssᴀɢᴇ")
                 elif(message=="/adminlist"):
                     admin_updates = telegram_bot().admin_list(usr_id)
                     admin_updates = admin_updates["result"]
@@ -136,19 +140,19 @@ while True:
                             admin_status = admin["status"]
                             if(admin_status=="administrator"):
                                 try:
-                                    admins=admins+(admin["user"]["username"])+"\n"
+                                    admins=admins+"@"+(admin["user"]["username"])+"\n"
                                 except:
                                     admins=admins+(admin["user"]["first_name"])+(admin["user"]["last_name"])+"\n"
                             else:
                                 try:
-                                    owner=owner+(admin["user"]["username"])+"\n"
+                                    owner=owner+"@"+(admin["user"]["username"])+"\n"
                                 except:
                                     owner=owner+(admin["user"]["first_name"])+(admin["user"]["last_name"])+"\n"
                     else:
-                        message = "It Works Only in Group"
-                    message = (f"admins:\n{admins}\nowner:\n{owner}")
+                        message = "sᴏᴍᴇ ᴇʀʀᴏʀ ᴄᴏɴᴛᴀᴄᴛ ᴀᴅᴍɪɴ"
+                    message = (f"👥ᴀᴅᴍɪɴs:\n{admins}\n👤ᴏᴡɴᴇʀ:\n{owner}")
                     
-                elif(message=="/creator"):
+                elif(message=="/creator"or message=="/creator@MissJessie_Bot"):
                     message = f"○Lᴀɴɢᴜᴀɢᴇ ᴜsᴇᴅ: ᴘʏᴛʜᴏɴ\n\n○ᴍʏ ᴍᴀsᴛᴇʀ: ᴘᴏᴏɴᴋᴀᴡɪɴ(@TITANHACKY)\n\n○ɢɪᴛʜᴜʙ ʟɪɴᴋ: https://github.com/TITANHACKY/jessie-bot\n\n○Iғ ʏᴏᴜ ᴄᴏᴘʏ ᴛʜᴇ ᴄᴏᴅᴇ ᴀᴛʟᴇᴀsᴛ ᴍᴇɴᴛɪᴏɴ ᴍʏ ɴᴀᴍᴇ ᴀɴʏᴡʜᴇʀᴇ ᴄᴏᴢ ɪ ʜᴀᴅ sᴛʀᴜɢɢʟᴇᴅ ᴀ ʟᴏᴛ ᴀɴᴅ ᴘʟᴇᴀsᴇ ᴅᴏɴ'ᴛ sᴘᴏɪʟ ɪᴛ.\n\n★sʜᴀʀᴇ ᴀɴᴅ sᴜᴘᴘᴏʀᴛ★"
                 
 
