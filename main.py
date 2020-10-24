@@ -119,6 +119,35 @@ while True:
                         message = f"🔗ʟɪɴᴋ:\n\n{usr_link}"
                     except:
                         message = f"🔗ʟɪɴᴋ:\n\n{usr_link}"
+                elif(message=="/pin"):
+                    try:
+                        msg_id = msgs["message"]["reply_to_message"]["message_id"]
+                        message = ""
+                        telegram_bot().pin_message(usr_id,msg_id)
+                    except:
+                        message = ("Reply to any Message To pin it")
+                elif(message=="/adminlist"):
+                    admin_updates = telegram_bot().admin_list(usr_id)
+                    admin_updates = admin_updates["result"]
+                    admins = ""
+                    owner = ""
+                    if admin_updates:
+                        for admin in admin_updates:
+                            admin_status = admin["status"]
+                            if(admin_status=="administrator"):
+                                try:
+                                    admins=admins+(admin["user"]["username"])+"\n"
+                                except:
+                                    admins=admins+(admin["user"]["first_name"])+(admin["user"]["last_name"])+"\n"
+                            else:
+                                try:
+                                    owner=owner+(admin["user"]["username"])+"\n"
+                                except:
+                                    owner=owner+(admin["user"]["first_name"])+(admin["user"]["last_name"])+"\n"
+                    else:
+                        message = "It Works Only in Group"
+                    message = (f"admins:\n{admins}\nowner:\n{owner}")
+                    
                 elif(message=="/creator"):
                     message = f"○Lᴀɴɢᴜᴀɢᴇ ᴜsᴇᴅ: ᴘʏᴛʜᴏɴ\n\n○ᴍʏ ᴍᴀsᴛᴇʀ: ᴘᴏᴏɴᴋᴀᴡɪɴ(@TITANHACKY)\n\n○ɢɪᴛʜᴜʙ ʟɪɴᴋ: https://github.com/TITANHACKY/jessie-bot\n\n○Iғ ʏᴏᴜ ᴄᴏᴘʏ ᴛʜᴇ ᴄᴏᴅᴇ ᴀᴛʟᴇᴀsᴛ ᴍᴇɴᴛɪᴏɴ ᴍʏ ɴᴀᴍᴇ ᴀɴʏᴡʜᴇʀᴇ ᴄᴏᴢ ɪ ʜᴀᴅ sᴛʀᴜɢɢʟᴇᴅ ᴀ ʟᴏᴛ ᴀɴᴅ ᴘʟᴇᴀsᴇ ᴅᴏɴ'ᴛ sᴘᴏɪʟ ɪᴛ.\n\n★sʜᴀʀᴇ ᴀɴᴅ sᴜᴘᴘᴏʀᴛ★"
                 
