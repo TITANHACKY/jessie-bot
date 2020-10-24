@@ -4,7 +4,7 @@ import configparser as cfg
 
 class telegram_bot():
     def __init__(self):
-        self.token = "1267906727:AAFDrnhtkbxhLJR5JqsFYbRnL0YQClVv_Yw" #Bot Tokent Here
+        self.token = "" #Bot Tokent Here
         self.base_url = f"https://api.telegram.org/bot{self.token}"
 
     #update function to get update from the bot
@@ -25,10 +25,12 @@ class telegram_bot():
         pinmessage_url = self.base_url+f"/pinChatMessage?chat_id={chat_id}&message_id={msg_id}"
         requests.get(pinmessage_url)
 
-    def unpin_message(self, chat_id, msg_id):
-        unpinmessage_url = self.base_url+f"/unpinChatMessage?chat_id={chat_id}&message_id={msg_id}"
+    #unpin message
+    def unpin_message(self, chat_id):
+        unpinmessage_url = self.base_url+f"/unpinChatMessage?chat_id={chat_id}"
         requests.get(unpinmessage_url)
 
+    #adminlist
     def admin_list(self, chat_id):
         adminlist_url = self.base_url+f"/getChatAdministrators?chat_id={chat_id}"
         r = requests.get(adminlist_url)

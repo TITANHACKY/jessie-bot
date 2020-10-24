@@ -30,9 +30,9 @@ while True:
             try:                                                                              
                 message = msgs["message"]["text"]
                 if(message=="/start" or message=="/start@MissJessie_Bot"):
-                    message = f"👋ʜᴇʏ @{usr_username}\n\n✦ɪ'ᴀᴍ ᴍɪss ᴊᴇssɪᴇ. ɪ ᴡᴀs ᴀ ᴘʏᴛʜᴏɴ ʙᴏᴛ ᴜsᴇᴅ ᴛᴏ ғɪɴᴅ  ᴜsᴇʀ ɪᴅ ᴜsᴇʀɴᴀᴍᴇ ғɪʀsᴛɴᴀᴍᴇ ʟᴀsᴛɴᴀᴍᴇ ᴀɴᴅ  ᴘʀᴏғɪʟᴇ ʟɪɴᴋ\n\n✦ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴀɴᴅ ᴘʀᴏᴍᴏᴛᴇ ᴍᴇ ᴛᴏ ᴀᴅᴍɪɴ ᴀᴏ ᴛʜᴀᴛ ɪ ᴄᴀɴ ғɪɴᴅ ᴛʜᴇ ᴜsᴇʀ ᴅᴇᴛᴀɪʟs ʙʏ ᴊᴜsᴛ ʀᴇᴘʟʏɪɴɢ ᴛᴏ ᴛʜᴇ ᴜsᴇʀ ᴍᴇssᴀɢᴇ\n\n✦ɪʟʟ ᴡᴇʟᴄᴏᴍᴇ ɴᴇᴡ ᴜsᴇʀs ɪɴ ɢʀᴏᴜᴘ\n\n✦ʜɪᴛ /help ᴛᴏ ʟᴏᴀᴅ ᴍʏ ᴄᴏᴍᴍᴀɴᴅs."
+                    message = f"👋ʜᴇʏ @{usr_username}\n\n✦ɪ'ᴀᴍ ᴍɪss ᴊᴇssɪᴇ. ɪ ᴡᴀs ᴀ ᴘʏᴛʜᴏɴ ʙᴏᴛ\n\n✦ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴀɴᴅ ᴘʀᴏᴍᴏᴛᴇ ᴍᴇ ᴛᴏ ᴀᴅᴍɪɴ ᴀᴏ ᴛʜᴀᴛ ɪ ᴄᴀɴ ғɪɴᴅ ᴛʜᴇ ᴜsᴇʀ ᴅᴇᴛᴀɪʟs ʙʏ ᴊᴜsᴛ ʀᴇᴘʟʏɪɴɢ ᴛᴏ ᴛʜᴇ ᴜsᴇʀ ᴍᴇssᴀɢᴇ\n✦ɪʟʟ ᴡᴇʟᴄᴏᴍᴇ ɴᴇᴡ ᴜsᴇʀs ɪɴ ɢʀᴏᴜᴘ\n✦ᴀʟsᴏ ғɪɴᴅ ᴀᴅᴍɪɴs ɪɴ ᴛʜᴇ ɢʀᴏᴜᴘ\n✦ᴘɪɴ ᴀɴᴅ ᴜɴᴘɪɴ ᴍᴇssᴀɢᴇs ɪɴ ɢʀᴏᴜᴘ\n\n✦ʜɪᴛ /help ᴛᴏ ʟᴏᴀᴅ ᴍʏ ᴄᴏᴍᴍᴀɴᴅs."
                 elif(message=="/help" or message=="/help@MissJessie_Bot"):
-                    message = "ʜɪ I'ᴍ ᴀ sɪᴍᴘʟᴇ ᴘʏᴛʜᴏɴ ʙᴏᴛ ᴡɪᴛʜ ғᴇᴡ ᴄᴏᴍᴍᴀɴᴅs:\n/info - ●ᴛᴏ ɢᴇᴛ ᴅᴇᴛᴀɪʟs\n/id - ●ᴛᴏ ғɪɴᴅ ɪᴅ\n/uname - ●ᴛᴏ ғɪɴᴅ ᴜsᴇʀɴᴀᴍʀ\n/name - ●ᴛᴏ ғɪɴᴅ ɴᴀᴍᴇ\n/fname - ●ᴛᴏ ғɪɴᴅ ғғɪʀsᴛɴᴀᴍᴇ\n/lname - ●ᴛᴏ ғɪɴᴅ ʟᴀsᴛɴᴀᴍᴇ\n/link - ●ᴛᴏ ɢᴇᴛ ᴘʀᴏғɪʟᴇ ʟɪɴᴋ\n/pin - ●ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ ᴛᴏ ᴘɪɴ\n/unpin - ●ᴛᴏ ᴜɴᴘɪɴ ᴛʜᴇ ᴍᴇssᴀɢᴇ\n/creator - ●ᴛᴏ ғɪɴᴅ ᴍʏ ᴄʀᴇᴀᴛᴏʀ"
+                    message = "ʜɪ I'ᴍ ᴀ sɪᴍᴘʟᴇ ᴘʏᴛʜᴏɴ ʙᴏᴛ ᴡɪᴛʜ ғᴇᴡ ᴄᴏᴍᴍᴀɴᴅs:\n\n/info - ●ᴛᴏ ɢᴇᴛ ᴅᴇᴛᴀɪʟs\n/id - ●ᴛᴏ ғɪɴᴅ ɪᴅ\n/uname - ●ᴛᴏ ғɪɴᴅ ᴜsᴇʀɴᴀᴍʀ\n/name - ●ᴛᴏ ғɪɴᴅ ɴᴀᴍᴇ\n/fname - ●ᴛᴏ ғɪɴᴅ ғғɪʀsᴛɴᴀᴍᴇ\n/lname - ●ᴛᴏ ғɪɴᴅ ʟᴀsᴛɴᴀᴍᴇ\n/link - ●ᴛᴏ ɢᴇᴛ ᴘʀᴏғɪʟᴇ ʟɪɴᴋ\n/adminlist - ●ᴛᴏ ғɪɴᴅ ɢʀᴏᴜᴘ ᴀᴅᴍɪɴs\n/pin - ●ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ ᴛᴏ ᴘɪɴ\n/unpin - ●ᴛᴏ ᴜɴᴘɪɴ ᴛʜᴇ ᴍᴇssᴀɢᴇ\n/creator - ●ᴛᴏ ғɪɴᴅ ᴍʏ ᴄʀᴇᴀᴛᴏʀ"
                 elif(message=="/id" or message=="/id@MissJessie_Bot"):
                     try:
                         usr_id = msgs["message"]["reply_to_message"]["from"]["id"]
